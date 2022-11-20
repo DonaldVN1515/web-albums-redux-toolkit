@@ -83,7 +83,7 @@ const initialPhotos = [
 	},
 ];
 
-const photo = createSlice({
+const photoSlice = createSlice({
 	name: 'photo',
 	initialState: initialPhotos,
 	reducers: {
@@ -112,7 +112,7 @@ const photo = createSlice({
 	},
 });
 
-const { reducer, actions } = photo;
+const { reducer, actions } = photoSlice;
 
 export const { addPhoto, remoPhoto, updatePhoto } = actions;
 

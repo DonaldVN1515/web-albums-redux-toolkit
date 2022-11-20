@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import PhotoList from '../../components/PhotoList';
 import { remoPhoto } from '../../photoSlice';
+import Banner from '../../../../components/Banner';
 
 function MainPhoto(props) {
 	const dispatch = useDispatch();
@@ -29,6 +30,8 @@ function MainPhoto(props) {
 
 	return (
 		<Container>
+			<Banner />
+
 			<Row style={{ padding: '20px 0px' }}>
 				<Col>
 					<h3>ALBUMS | DONALDVN</h3>

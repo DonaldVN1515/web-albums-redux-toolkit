@@ -1,17 +1,25 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Container, Col, Row } from 'reactstrap';
+import { Container, Col, Row, Button } from 'reactstrap';
 
 function Header(args) {
 	return (
 		<Container>
-			<Row style={{ padding: '20px 0px' }}>
+			<Row style={{ padding: '10px 0px' }}>
 				<Col>
 					<NavLink to='/'>DonaldVN</NavLink>
 				</Col>
 
-				<Col>
-					<NavLink to='photo/add'>Add New</NavLink>
+				<Col style={{ display: 'flex', justifyContent: 'flex-end' }}>
+					<Button color='white'>
+						<NavLink to='photo/add'>Add New</NavLink>
+					</Button>
+					<Button color='white'>
+						<NavLink to='sign-up'>Sign up</NavLink>
+					</Button>
+					<Button color='primary'>
+						<NavLink to='sign-in'>Sign In</NavLink>
+					</Button>
 				</Col>
 			</Row>
 		</Container>

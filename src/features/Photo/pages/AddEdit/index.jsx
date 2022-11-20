@@ -7,6 +7,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { addPhoto, updatePhoto } from '../../photoSlice';
 import PhotoForm from '../../components/PhotoForm';
 import { Container, Row } from 'reactstrap';
+import Banner from '../../../../components/Banner';
 
 function AddEditPhoto(props) {
 	const dispatch = useDispatch();
@@ -51,9 +52,11 @@ function AddEditPhoto(props) {
 
 	return (
 		<Container>
+			<Banner />
 			<Row>
 				<h3 style={{ padding: '20px 0px' }}>ADD NEW PHOTO</h3>
 			</Row>
+
 			<PhotoForm
 				initialValues={initialValues}
 				onSubmit={handleSubmit}
